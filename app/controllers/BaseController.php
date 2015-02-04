@@ -1,6 +1,12 @@
 <?php
 
 class BaseController extends Controller {
+	public function __construct()
+	{
+		// put this everytime you have a new project
+		// require csrf token for all post, delete, and put actions
+    	$this->beforeFilter('csrf', array('on' => array('post', 'delete', 'put')));
+	}
 
 	/**
 	 * Setup the layout used by the controller.

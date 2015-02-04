@@ -1,6 +1,6 @@
 <?php
 
-class PostsController extends \BaseController {
+class PostsController extends BaseController {
 
 	/**
 	 * Display a listing of the resource.
@@ -9,7 +9,7 @@ class PostsController extends \BaseController {
 	 */
 	public function index()
 	{
-		$posts = Post::all();
+		$posts = Post::paginate(3);
 		return View::make('posts.index')->with('posts', $posts);
 	}
 
@@ -32,17 +32,8 @@ class PostsController extends \BaseController {
 	 */
 	public function store()
 	{
-		$validator = Validator::make(Input::all(), Post::$rules);
-
-		if ($validator->fails()) {
-			return Redirect::back()->withInput()->withErrors($validator);
-		} else {			
-			$post = new Post();
-			$post->title = Input::get('title');
-			$post->body  = Input::get('body');
-			$post->save();
-			return Redirect::action('PostsController@index')->withInput(); // ??withInput
-		}
+		$post = new Post();
+		return $this->savePost($post);	
 	}
 
 
@@ -54,7 +45,7 @@ class PostsController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		$post = Post::find($id);
+		$post = Post::findOrFail($id);
 		return View::make('posts.show')->with('post', $post);
 	}
 
@@ -67,7 +58,8 @@ class PostsController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		return "Navigating to http://blog.dev/posts should show a form for editing a specific post";
+		$post = Post::findOrFail($id);
+		return View::make('posts.edit')->with('post', $post);
 	}
 
 
@@ -79,7 +71,8 @@ class PostsController extends \BaseController {
 	 */
 	public function update($id)
 	{
-		return "Navigating to http://blog.dev/posts should update a specific post";
+		$post = Post::findOrFail($id);
+		return $this->savePost($post);
 	}
 
 
@@ -94,5 +87,23 @@ class PostsController extends \BaseController {
 		return "Navigating to http://blog.dev/posts should delete a specific post";
 	}
 
+
+
+
+	protected function savePost($post) 
+	{
+		$validator = Validator::make(Input::all(), Post::$rules);
+
+		if ($validator->fails()) {
+			Session::flash('errorMessage', 'Failed to save the post!');
+			return Redirect::back()->withInput()->withErrors($validator);
+		} else {
+			Session::flash('successMessage', 'Your post was saved!');						
+			$post->title = Input::get('title');
+			$post->body  = Input::get('body');
+			$post->save();
+			return Redirect::action('PostsController@show', $post->id);
+		}
+	}
 
 }

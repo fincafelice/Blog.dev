@@ -1,5 +1,6 @@
 <?php 
 
+
 return array(
 	'DB_HOST' => '',
 	'DB_NAME' => '',

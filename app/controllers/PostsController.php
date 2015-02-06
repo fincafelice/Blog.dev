@@ -141,6 +141,11 @@ class PostsController extends BaseController {
 			$post->title = Input::get('title');
 			$post->body  = Input::get('body');
 			$post->save();
+
+			if (Input::hasFile('image')) {
+				$post->uploadFile(Input::file('image'));
+			}
+
 			return Redirect::action('PostsController@show', $post->id);
 		}
 	}

@@ -9,3 +9,9 @@
 	{{ Form::textarea('body', Input::old('body'), array('class' => 'form-control', 'rows' => '8', 'cols' => '50')) }}
 	{{ $errors->first('body', '<p class-"help-block">:message</p>') }}
 </div>
+
+<div>
+	{{ Form::label('image', 'Post Image') }}<br>
+	{{ Form::file('image', array('class' => 'form-control')) }}
+	{{ $errors->first('image', '<p class-"help-block">:message</p>') }}
+</div>

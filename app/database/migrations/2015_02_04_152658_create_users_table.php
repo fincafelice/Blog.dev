@@ -21,6 +21,9 @@ class CreateUsersTable extends Migration {
 	    $table->string('last_name', 150);
 	    $table->rememberToken();
 	    $table->timestamps();
+
+	    $table->integer('user_id')->unsigned();
+	    $table->foreign('user_id')->references('id')->on('users');
 	});
 	}
 

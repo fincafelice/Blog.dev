@@ -18,6 +18,8 @@ class CreatePostsTable extends Migration {
             $table->string('title', 100);
             $table->text('body');
             $table->string('image_url');
+            $table->string('source_name', 100);
+            $table->string('source_url', 200);
             $table->timestamps();
         });
 	}

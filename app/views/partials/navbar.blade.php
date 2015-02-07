@@ -8,7 +8,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <h2><a href="#">Blogs Galore!</a></h2>
+      <h2>Blogs Galore!</h2>
     </div>
 
     <!-- Need action for search-->

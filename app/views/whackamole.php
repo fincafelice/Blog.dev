@@ -3,6 +3,7 @@
 	<title>Whackamole</title>
 	<meta charset="utf-8">
   	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 	<style>
 		body {	
 			background-image: url(/img/pink_background.jpg);
@@ -49,6 +50,8 @@
 		.box_size {
 			height: 175px;
 			width: 175px;
+			position: relative;
+			max-width: 100%;
 			margin: 5px;
 			border: 2px solid black;
 			padding: 10px;
@@ -72,7 +75,7 @@
 
 <body> 
 
-	<div class = "container_color container1">
+	<div class = "container container_color container1">
 		<button class = "button_color">Your Score:</button>
 		<div class = "score_box">0</div>
 		<h1 class = "h2">Click the flower and score points.</h1>
@@ -82,49 +85,49 @@
 		<source src = ""></source>
 	</audio>
 
-	<div id = "container" class = "container_color container2">		
+	<div id = "container" class = "container container_color container2">		
 		<!--1-->
-		<div class = "box_size box_color">
+		<div class = "col-md-4 box_size box_color">
 			<h1>Psychotria Elatra</h1>
 		</div>
 
 		<!--2-->
-		<div class = "box_size box_color">
+		<div class = "col-md-4 box_size box_color">
 			<p>This weird plant might look like the work of photo editing software, but I can assure you those kissable lips are all natural.</p>
 		</div>
 
 		<!--3-->
-		<div class = "box_size box_color">
+		<div class = "col-md-4 box_size box_color">
 			<p>Found in the tropical rain forests of Central and South American countries like Colombia, Costa Rica, <strong>Panama</strong> and Ecuador.</p>
 		</div>
 
 		<!--4-->
-		<div class = "box_size box_color">
+		<div class = "col-md-4 box_size box_color">
 			<p>The <strong>Psychotria Elatra</strong> plant has apparently evolved into its current shape to attract pollinators including hummingbirds and butterflies.</p>
 		</div>
 
 		<!--5-->
-		<div class = "box_size box_color">
+		<div class = "col-md-4 box_size box_color">
 			<h1>Psychotria Elatra</h1>
 		</div>
 
 		<!--6-->
-		<div class = "box_size box_color">
+		<div class = "col-md-4 box_size box_color">
 			<p>This extraordinary flower has unfortunately become endangered due to uncontrolled deforestation in the above-mentioned countries. </p>
 		</div>
 
 		<!--7-->
-		<div class = "box_size box_color">
+		<div class = "col-md-4 box_size box_color">
 			<p>So if you’ve ever wanted to plant a kiss on Mother Nature, find yourself a Hot Lips plant and do it while you still can. </p>
 		</div>
 
 		<!--8-->
-		<div class = "box_size box_color">
+		<div class = "col-md-4 box_size box_color">
 			<p>The bracts are only kissable for a short while, before they spread open to reveal the plant’s flowers.</p>
 		</div>
 
 		<!--9-->
-		<div class = "box_size box_color">
+		<div class = "col-md-4 box_size box_color">
 			<h1>Psychotria Elatra</h1>
 		</div>
 	</div>

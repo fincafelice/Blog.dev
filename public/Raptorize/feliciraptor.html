@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>My Raptor</title>
+	<style>
+		.body {
+			background-image: url(/img/forest.jpg);
+		}
+		.header {
+			color: red;
+			font-size: 50px;
+		}
+	</style>
+	<!-- jQuery: Grab Google CDN jQuery. fall back to local if necessary -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+	<script>!window.jQuery && document.write('<script src="jquery-1.4.1.min.js"><\/script>')</script>
+	
+	<!-- The raptorize file  -->
+	<script src="jquery.raptorize.1.0.js"></script>
+	
+	<!-- For the button version -->
+	<script type="text/javascript">
+		$(window).load(function() {
+			$('.button').raptorize();
+		});
+	</script>
+	
+</head>
+
+
+<body class = "body">
+	<h1 class = "header">Wanna see some awesomeness?</h1>
+	
+	<h1><a href="#" class="button">Well, click me!</a></h1>
+	
+</body>
+</html>

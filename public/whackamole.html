@@ -2,6 +2,11 @@
 <head>
 	<title>Whackamole</title>
 
+	<!-- Bootstrap -->
+    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="icon" href="../../favicon.ico"> <!-- Static Top Navbar -->
+
 	<style>
 		body {	
 			background-image: url(/img/pink_background.jpg);
@@ -48,6 +53,8 @@
 		.box_size {
 			height: 175px;
 			width: 175px;
+			position: relative;
+			max-width: 100%;
 			margin: 5px;
 			border: 2px solid black;
 			padding: 10px;
@@ -160,6 +167,9 @@
 
 		},1000);
     </script>
-    <script src = "/js/moment.js"></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>

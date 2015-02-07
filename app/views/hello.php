@@ -39,7 +39,7 @@
 	<div class="welcome">
 		<h1>Felice Malaszowski</h1>
 		<h2>You Have Arrived!</h2>
-		<a href="http://blog.dev/mockup_website.html" title="Blogs Galore!"><img src="/img/flower_fuschia_roses.png" alt="Felice Roses"></a>
+		<a href="/mockup_website.html" title="Blogs Galore!"><img src="/img/flower_fuschia_roses.png" alt="Felice Roses"></a>
 		<h3>Click the image to enter.</h3>
 	</div>
 </body>

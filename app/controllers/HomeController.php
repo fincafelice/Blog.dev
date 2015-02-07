@@ -51,7 +51,7 @@ class HomeController extends BaseController {
 	public function doLogout()
 	{
 		Auth::logout();
-		Session::flash('successMessage', 'So long and thanks for all the fish!');
+		Session::flash('successMessage', 'So long and thanks for all the fish! Wink, wink!');
 		return Redirect::action('PostsController@index');
 	}
 

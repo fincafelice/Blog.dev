@@ -1,11 +1,19 @@
 <html>
 <head>
 	<title>Contact Email</title>
+
+    <style>
+        body {
+            background-image: url(/img/pink_background.jpg);
+            background-size: 1500px;
+        }
+    </style>
 </head>
 <body>
 	<h2>Compose an Email</h2>
 	<form method="POST" action="/my_first_form.php">
     <p>
+        <a href = "mailto:felice.vargas@gmail.com">Email</a>
         <label for="To:">To: </label>
         <input id="To:" name="To:" type="text">
     </p>
@@ -19,7 +27,7 @@
     </p>
     <p>
         <label for="Subject:"></label>
-        <textarea id="email_body" name="email_body" rows="5" cols="20" placeholder="Compose email"></textarea>
+        <textarea id="email_body" name="email_body" rows="20" cols="75" placeholder="Compose email"></textarea>
     </p>
     <button type="submit">Submit</button>
 </body>
